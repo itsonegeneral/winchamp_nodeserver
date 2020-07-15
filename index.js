@@ -106,6 +106,10 @@ app.post('/users/user',(req,res)=>{
     mUser.user(req,res,mysqlConnection);
 });
 
+app.post('/users/createuser',(req,res)=>{
+    mUser.createUser(req,res,mysqlConnection);
+});
+
 getCurrentDate = function(){
     var asiaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Shanghai"});
 
